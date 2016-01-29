@@ -17,6 +17,7 @@ class TestDataCollection extends PHPUnit_Framework_TestCase
         $result = array($key => $value);
         $collection = new DataCollection;
         $this->assertFalse($collection->has($key));
+        $this->assertNull($collection->get($key));
         $collection->set($key, $value);
         $this->assertTrue($collection->has($key));
         $this->assertEquals($collection->getAll(), $result);
