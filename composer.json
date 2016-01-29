@@ -1,0 +1,14 @@
+{
+    "name": "drips/datastructures",
+    "description": "Datenstrukturen für PHP, z.B.: Collections",
+    "keywords": ["collection"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+       "psr-4": {
+           "Drips\\datastructures\\": "src"
+       }
+   }
+}
