@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/Prowect/DataStructures.svg)](https://travis-ci.org/Prowect/DataStructures)
 [![Code Climate](https://codeclimate.com/github/Prowect/DataStructures/badges/gpa.svg)](https://codeclimate.com/github/Prowect/DataStructures)
 [![Test Coverage](https://codeclimate.com/github/Prowect/DataStructures/badges/coverage.svg)](https://codeclimate.com/github/Prowect/DataStructures/coverage)
+[![Latest Release](https://img.shields.io/packagist/v/drips/DataStructures.svg)](https://packagist.org/packages/drips/datastructures)
+
 
 Dieses Paket beinhaltet eine Klasse `DataCollection` zum Speichern von Daten. Hierbei stehen folgende Methoden zur Verfügung:
 
