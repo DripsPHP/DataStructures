@@ -2,7 +2,9 @@
 
 namespace Drips\DataStructures;
 
-interface IDataCollection
+use ArrayAccess;
+
+interface IDataCollection extends ArrayAccess
 {
     public function get($key);
 
