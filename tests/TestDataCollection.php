@@ -23,5 +23,18 @@ class TestDataCollection extends PHPUnit_Framework_TestCase
         $this->assertFalse(isset($collection["töst"]));
         $collection["töst"] = "EINZ";
         $this->assertTrue(isset($collection["töst"]));
+        $this->assertEquals($collection["töst"], "EINZ");
+    }
+    
+    public function testArrayAccess() {
+        $collection = new DataCollection;
+        $collection[] = "nulltes";
+        $this->assertEquals(count($collection), 1);
+        $this->assertFalse(isset($collection["töst"]));
+        $collection["töst"] = "EINZ";
+        $this->assertTrue(isset($collection["töst"]));
+        $this->assertEquals($collection["töst"], "EINZ");
+        unset($collection["töst"]);
+        $this->assertFalse(isset($collection["töst"]));
     }
 }
