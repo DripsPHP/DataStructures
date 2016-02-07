@@ -29,6 +29,14 @@ class DataCollection implements IDataCollection
         return $this->collection;
     }
 
+    public function delete($key) {
+        if($this->has($key)){
+            unset($this->collection[$key]);
+            return true;
+        }
+        return false;
+    }
+
     //ArrayAccess
     public function offsetSet($offset, $value) {
         if (is_null($offset)) {

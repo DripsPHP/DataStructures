@@ -7,7 +7,7 @@ require_once __DIR__.'/../vendor/autoload.php';
 use PHPUnit_Framework_TestCase;
 use Drips\DataStructures\DataCollection;
 
-class TestDataCollection extends PHPUnit_Framework_TestCase
+class DataCollectionTest extends PHPUnit_Framework_TestCase
 {
     public function testDC(){
         $key = "key";
@@ -25,7 +25,17 @@ class TestDataCollection extends PHPUnit_Framework_TestCase
         $this->assertTrue(isset($collection["töst"]));
         $this->assertEquals($collection["töst"], "EINZ");
     }
-    
+
+    public function deleteDC(){
+        $collection = new DataCollection;
+        $this->assertFalse($collection->delete("key"));
+        $this->assertFalse($collection->has("key"));
+        $collection->set("key", 123);
+        $this->assertTrue($collection->has("key"));
+        $this->assertTrue($collection->delete("key"));
+        $this->assertFalse($collection->has("key"));
+    }
+
     public function testArrayAccess() {
         $collection = new DataCollection;
         $collection[] = "nulltes";

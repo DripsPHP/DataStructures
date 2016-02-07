@@ -13,4 +13,6 @@ interface IDataCollection extends ArrayAccess
     public function has($key);
 
     public function getAll();
+
+    public function delete($key);
 }
