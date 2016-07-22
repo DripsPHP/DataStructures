@@ -2,13 +2,13 @@
 
 namespace tests;
 
-
-use PHPUnit_Framework_TestCase;
 use Drips\DataStructures\DataCollection;
+use PHPUnit_Framework_TestCase;
 
 class DataCollectionTest extends PHPUnit_Framework_TestCase
 {
-    public function testDC(){
+    public function testDC()
+    {
         $key = "key";
         $value = "value";
         $result = array($key => $value);
@@ -25,7 +25,8 @@ class DataCollectionTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($collection["töst"], "EINZ");
     }
 
-    public function deleteDC(){
+    public function deleteDC()
+    {
         $collection = new DataCollection;
         $this->assertFalse($collection->delete("key"));
         $this->assertFalse($collection->has("key"));
@@ -35,7 +36,8 @@ class DataCollectionTest extends PHPUnit_Framework_TestCase
         $this->assertFalse($collection->has("key"));
     }
 
-    public function testArrayAccess() {
+    public function testArrayAccess()
+    {
         $collection = new DataCollection;
         $collection[] = "nulltes";
         $this->assertEquals(count($collection), 1);

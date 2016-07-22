@@ -12,3 +12,19 @@ Dieses Paket beinhaltet eine Klasse `DataCollection` zum Speichern von Daten. Hi
  - `set($key, $value)` - dient zum Einfügen eines Elements in die Collection. Hierbei wird der übergebene `$value` beim dazugehörigen `$key` hinterlegt.
  - `has($key)` - gibt `true` bzw. `false` zurück, je nachdem ob der Key in der der Collection existiert oder nicht.
  - `getAll()` - liefert die Collection als PHP-Array zurück.
+ 
+Zusätzlich implementiert die `DataCollection` ein `ArrayAccess`, somit kann ähnlich wie bei einem Array darauf zugegriffen werden.
+
+z.B.:
+
+```php
+<?php
+
+use Drips\DataStructures\DataCollection;
+
+$collection = new DataCollection;
+$collection['test'] = 123;
+
+echo $collection['test']; 
+// Output: 123
+```
